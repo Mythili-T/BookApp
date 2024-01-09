@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BookAppService } from '../book-app.service';
+import { BookheaderComponent } from '../bookheader/bookheader.component';
 
 @Component({
   selector: 'app-view-book',
   standalone: true,
-  imports: [],
+  imports: [BookheaderComponent],
   templateUrl: './view-book.component.html',
   styleUrl: './view-book.component.css'
 })

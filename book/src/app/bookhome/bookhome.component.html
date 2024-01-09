@@ -1,7 +1,7 @@
 <app-bookheader></app-bookheader><br><br>
 <section id="home">
   <h2>Welcome to our Book App !...</h2>
-</section><br><br>
+</section><br><br><br>
 <div class="images-flex" *ngFor="let items of getMaterials">
   <div class="course-image">
     <div class="images">
@@ -9,7 +9,7 @@
     </div>
   </div>
   <div class="videos">
-    <a routerLink="/View-Book/{{items.id}}">View details</a>
+    <a class="button"routerLink="/View-Book/{{items.id}}" style="margin-left: 300px;">Viewdetails</a>
   </div>
   <br><br>
 </div>
