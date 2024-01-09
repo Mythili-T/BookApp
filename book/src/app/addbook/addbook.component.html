@@ -1,0 +1,30 @@
+<app-bookheader></app-bookheader>
+<h1 style="text-align: center;">Add book</h1>
+<form class="body">
+  <br><br>
+  <div class="formreg" [formGroup]="addBookForm">
+    <div class="teacherBox1">
+      &nbsp;&nbsp;&nbsp;<span class="teacherdetails">Image URL </span>
+    <input type="text" required formControlName="ImagesURL" />
+    </div>
+    <div class="teacherBox1">
+      &nbsp;<span class="teacherdetails"> Book Name </span>
+      <input type="text" required formControlName="title" />
+    </div>
+    <div class="teacherBox1">
+    <span class="teacherdetails"> Author Name </span>
+    <input type="text" required formControlName="author" />
+    </div>
+
+    <div class="teacherBox1">
+      &nbsp;  &nbsp;  <span class="teacherdetails">Book Cost </span>
+     <input type="text" required formControlName="Cost" />
+    </div>
+    <div class="teacherBox1">
+      &nbsp;&nbsp;  &nbsp;   <span class="teacherdetails"> Discount </span>
+      <input type="text" required formControlName="Discount" />
+    </div>
+    <button (click)="onSubmit()">Submit</button>
+  </div>
+</form>
+

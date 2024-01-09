@@ -1,0 +1,43 @@
+<app-bookheader></app-bookheader>
+<h2>Manage Book</h2>
+<table>
+  <tr>
+    <th>Book Name</th>
+    <th>Author Name </th>
+    <th>cost</th>
+    <th>Discount </th>
+    <th>Edit</th>
+    <th>Delete</th>
+
+  </tr><br>
+  <tr style="text-align: center;" *ngFor="let user of getMaterials ">
+    <td>{{user.title}}</td>
+    <td> {{user.author}}</td>
+    <td> {{user.Cost}}</td>
+    <td> {{user.Discount}}</td>
+    <td><Button (click)="edit(user,$event)">Edit</Button></td>
+    <td><Button (click)="deleteBook(user.id)">Delete</Button></td>
+  </tr><br>
+</table><br><br>
+
+<form class="formreg" [formGroup]="editBookForm" (ngSubmit)="update()" *ngIf="editFormHidden">
+  <div class="teacherBox1">
+    &nbsp;<span class="teacherdetails"> Book Name </span>
+    <input type="text" required formControlName="UpdateBookName" />
+  </div>
+  <div class="teacherBox1">
+  <span class="teacherdetails"> Author Name </span>
+  <input type="text" required formControlName="UpdateAuthorName" />
+  </div>
+
+  <div class="teacherBox1">
+    &nbsp;  &nbsp;  <span class="teacherdetails">Book Cost </span>
+   <input type="text" required formControlName="UpdateBookCost" />
+  </div>
+  <div class="teacherBox1">
+    &nbsp;&nbsp;  &nbsp;   <span class="teacherdetails"> Discount </span>
+    <input type="text" required formControlName="UpdateDiscount" />
+  </div>
+  <button class="button">Submit</button>
+</form>
+
